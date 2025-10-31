@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: red;
+  color: white;
+}
+h1 {
+  background-color: aliceblue;
+  color: black;
+  font-size: medium;
+}
+.heading {
+  background-color: aqua;
+  text-shadow: 2px 2px 0 rgb(198, 175, 148);
+}
+#abc {
+  background: linear-gradient(-45deg, red, blue, yellow);
+}
+.div1 {
+  border: 10px solid white;
+}
