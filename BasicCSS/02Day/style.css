@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(250deg , red,black,purple);
+    color: white;
+    border-radius: 15px;
+    margin: 230px;
+    cursor: pointer;
+}
