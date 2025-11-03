@@ -1,0 +1,60 @@
+body{
+    background: url(./backimage.jpg);
+    background-size: cover;
+    
+}
+#MainBox{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 1px black;
+}
+#FormHeading{
+    text-align: center;
+    color: blue;
+}
+.LoginForm{
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+}
+.FormField{
+    padding: 10px;
+}
+.FormField input{
+    padding: 5px;
+    border-radius: 10px;
+    outline-color: red;
+}
+#FormControl{
+    margin: auto;
+    width: fit-content;
+}
+#SubmitButton{
+    background-color: green;
+    color: white;
+    border-radius: 5px ;
+    padding: 7px;
+}
+#CancelButton{
+    background-color: green;
+    color: white;
+    border-radius: 5px ;
+    padding: 7px;
+}
+#SubmitButton,#CancelButton:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+#SubmitButton:active{
+    background-color:  aliceblue;
+    color:blue;
+}
+#CancelButton:active{
+    background-color:  aliceblue;
+    color:blue;
+}
