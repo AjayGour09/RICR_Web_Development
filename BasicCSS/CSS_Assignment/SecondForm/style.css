@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: blue;
+}
+.Container {
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-left: 150px;
+  background-color: white;
+  border-radius: 10px;
+}
+h2 {
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+}
+.childContainer {
+  display: flex;
+  gap: 3px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 100;
+  input {
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 1px;
+  }
+}
+.Condition {
+  margin-left: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
+button {
+  width: 300px;
+  height: 40px;
+  margin: 50px 50px 20px 50px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+}
+#account{
+    display: flex;
+    margin-left: 70px;
+    gap: 7px;
+    #login{
+        color: blue;
+        cursor: pointer;
+    }
+}
