@@ -1,0 +1,15 @@
+.first {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  /* display: block; */
+  /* display: inline; */
+  display: inline-block;
+}
+.Second,
+.third {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  display: inline-block;
+}

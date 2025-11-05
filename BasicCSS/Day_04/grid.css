@@ -1,0 +1,14 @@
+#mainDiv {
+  width: 1000px;
+  height: 1000px;
+  background-color: aqua;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+}
+.subdiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}

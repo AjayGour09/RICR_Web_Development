@@ -1,0 +1,25 @@
+#mainDiv{
+    width: 1000px;
+    height: 1000px;
+    background-color: aqua;
+    border: 1px solid black;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1px;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    /* justify-content: baseline; */
+    /* justify-content: end; */
+    align-items: center;
+    /* align-items: baseline; */
+    /* align-items: end; */
+
+
+}
+.subdiv{
+    width: 100px;
+    height: 100px;   
+    background-color: red;
+    border: 1px solid black;
+}

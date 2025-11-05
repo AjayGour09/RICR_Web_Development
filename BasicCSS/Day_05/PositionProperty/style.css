@@ -1,0 +1,10 @@
+#navbar{
+    border: 1px solid blanchedalmond;
+    background-color: blue;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    align-items: center;
+    
+}
