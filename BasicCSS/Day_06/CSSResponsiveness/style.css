@@ -1,0 +1,26 @@
+#mainDiv {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  .subDiv {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(202, 243, 106);
+  }
+}
+@media screen and (max-width:700px) {
+    #mainDiv{
+        grid-template-columns: auto auto auto;
+        background-color: rebeccapurple;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #mainDiv{
+        grid-template-columns: auto auto auto  ;
+        background-color: rgb(216, 202, 74);
+    }
+}
