@@ -1,0 +1,75 @@
+body {
+  background: #000;
+  color: white;
+}
+h1 {
+  width: 200px;
+  border: 1px solid rgb(255, 0, 0);
+  padding: 15px;
+}
+h1:hover {
+  margin-left: 150px;
+  transition: margin-left 10s;
+  cursor: pointer;
+  width: 300px;
+}
+.container {
+  width: 500px;
+  height: 100px;
+  border: 1px solid rgb(248, 103, 103);
+}
+.childContainer {
+  width: 50px;
+  height: 100px;
+  background: #f7a2a2;
+  /* margin: 5px; */
+}
+.container:hover {
+  cursor: pointer;
+  /* border: none; */
+  /* border-radius: 25px; */
+  .childContainer {
+    width: 500px;
+    /* border-radius: 25px; */
+    background-color: rgb(47, 114, 156);
+    transition: width 5s ease-in-out, background-color 2s ease-in-out;
+  }
+}
+#outer {
+  width: 500px;
+  height: 50px;
+  border: 1px solid rgb(239, 230, 230);
+  #inner {
+    height: 50px;
+  }
+}
+#outer:hover {
+  #inner {
+    animation: myAnimantion 5s linear;
+  }
+}
+@keyframes myAnimantion {
+  0% {
+    width: 0;
+    background-color: red;
+  }
+  50% {
+    width: 50%;
+    background-color: rgb(216, 235, 44);
+  }
+  100% {
+    width: 100%;
+    background-color: red;
+  }
+}
+.abc {
+  width: 100px;
+  height: 50px;
+  border: 1px solid rgb(216, 200, 200);
+  margin-top: 50px;
+  padding: 10px;
+}
+.abc:hover {
+  transform: rotatey(360deg);
+  transition: transform 1s;
+}
