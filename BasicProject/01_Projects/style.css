@@ -8,20 +8,31 @@
   height: 20px;
 }
 #navBar {
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 30px 30px 30px;
+  background-color:rgb(255, 255, 255);
+  /* margin-bottom: 30px; */
+  /* position: sticky; */
+  /* z-index: 99; */
+  position: fixed;
+  /* right: 130px; */
 }
 #icon {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
+  position: fixed;
 }
 .material {
   display: flex;
   gap: 50px;
   align-items: center;
   cursor: pointer;
+  position: fixed;
+  left: 520px;
   .page {
     display: flex;
     gap: 15px;
@@ -45,6 +56,8 @@
   align-items: center;
   gap: 60px;
   margin-right: 50px;
+  position: fixed;
+  left: 1200px;
   #signIn {
     width: 90px;
     height: 35px;
@@ -76,12 +89,13 @@
   }
 }
 .IntroducationSection {
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
 }
 .Intro {
   margin: 20px;
-  margin-top: 80px;
+  margin-top: 100px;
   #welcome {
     margin: 40px 20px 20px 80px;
     font-size: 40px;
@@ -135,10 +149,10 @@
   font-family: "Times New Roman", Times, serif;
 }
 #myimg {
-  width: 550px;
-  height: 500px;
+  width: 400px;
+  height: 450px;
   border-radius: 20px;
-  margin-top: 60px;
+  margin-top: 80px;
   margin-right: 100px;
   /* margin-right: 100px; */
 }
@@ -414,15 +428,17 @@
   }
 }
 .contactInfo {
+  margin-right: 0px;
   margin-top: 60px;
   display: flex;
   margin-left: 50px;
   width: 90%;
   height: 540px;
-  border: 1px solid rgb(218, 152, 152);
+  border: 1px solid rgb(237, 232, 232);
   border-radius: 10px;
+  box-shadow: 1px 1px 0px 0px rgb(133, 132, 132);
   .simplecont {
-    width: 500px;
+    width: 600px;
     height: 500px;
     border: 1px solid black;
     border-radius: 10px;
@@ -516,11 +532,17 @@
   }
 }
 .foter {
+  width: 1350px;
+  height: 100px;
+  border: 1px solid rgb(255, 253, 253);
+  box-shadow: 0px 0px 1px 0px rgb(133, 132, 132);
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   color: rgb(144, 137, 137);
   margin-top: 60px;
-  margin-bottom: 30px;
+  /* margin-bottom: 10px; */
+  margin-left: 70px;
   display: flex;
   align-items: center;
   justify-content: space-around;
