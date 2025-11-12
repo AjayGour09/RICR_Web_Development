@@ -407,6 +407,7 @@
   img {
     width: 120px;
     height: 40px;
+    filter: grayscale(100%);
   }
 }
 .contact {
