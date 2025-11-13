@@ -149,11 +149,12 @@
   font-family: "Times New Roman", Times, serif;
 }
 #myimg {
-  width: 400px;
-  height: 450px;
-  border-radius: 20px;
-  margin-top: 80px;
-  margin-right: 100px;
+  width: 80%;
+  /* height: 450px; */
+  border-radius: 10px;
+  margin-top: 10%;
+  /* margin-right: 100px; */
+  margin-left: 10%;
   /* margin-right: 100px; */
 }
 #logosize {
@@ -174,6 +175,7 @@
   gap: 100px;
 }
 .Skills {
+  margin-top: 100px;
   h3 {
     display: flex;
     align-items: center;
@@ -291,18 +293,34 @@
     color: rgb(144, 137, 137);
   }
   button {
+    /* width: 100px;
+    height: 80px; */
+
     border: none;
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     font-weight: 600;
     cursor: pointer;
+
     /* padding: 10px; */
   }
+   
   .btn {
+    width: 120px;
+    height: 40px;
     display: flex;
     align-items: center;
     margin: 20px;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    
   }
+  .btn:hover {
+    /* background-color: rgb(255, 255, 255); */
+      cursor: pointer;
+      box-shadow: 2px 5px 10px rgb(190, 188, 188);
+      transition: background-color 1s ease-out, transform 1s ease-out;
+    }
 }
 .bech {
   display: flex;
@@ -473,12 +491,18 @@
     margin-top: 60px;
     font-size: 14px;
     display: flex;
-    color: rgb(69, 186, 248);
-    gap: 10px;
+    color: rgb(141, 205, 240);
+    gap: 30px;
+    .firstName{
+      display: flex;
+      flex-direction: column;
+    }
+    .lastName{
+      display: flex;
+      flex-direction: column;
+    }
     input {
       width: 250px;
-      /* height: 80px; */
-      /* padding-right: 300px; */
       border: none;
       border-bottom: 1px solid rgb(19, 19, 20);
     }
@@ -486,6 +510,7 @@
   p {
     font-size: 20px;
     margin-bottom: 20px;
+    color: rgb(158, 220, 253);
   }
   .intrest {
     margin-top: 10px;
@@ -493,6 +518,7 @@
     margin-bottom: 30px;
   }
   .message {
+    color: rgb(141, 205, 240);
     font-size: 20px;
     input {
       margin-right: 300px;
@@ -509,7 +535,7 @@
     background-color: rgb(0, 0, 0);
     color: white;
     border: none;
-    margin-top: 80px;
+    margin-top: 40px;
     margin-left: 500px;
     cursor: pointer;
   }
@@ -520,6 +546,7 @@
     }
 }
 .mail {
+  color: rgb(141, 205, 240);
   margin-top: 20px;
   margin-bottom: 60px;
   /* width: 200px; */
