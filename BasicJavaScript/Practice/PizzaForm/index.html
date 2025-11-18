@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="border rounded bg-light p-5"
+      style="width: 500px; margin-left: 350px"
+    >
+      <div>
+        <i
+          class="bi bi-fork-knife d-flex align-items-center justify-content-center mb-3"
+          style="font-size: 45px"
+        ></i>
+        <h2
+          class="d-flex align-items-center justify-content-center text-primary border-bottom border-dark pb-4"
+        >
+          Simple Pizza Order Form
+        </h2>
+      </div>
+      <div>
+        <h3 class="border-bottom p-3 border-dark">Customer Information</h3>
+      </div>
+      <p>Name</p>
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="">
+          <label for="fname"></label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Enter Your First Name"
+            class="mb-2 ps-2"
+          />
+          <p>First Name</p>
+        </div>
+        <div>
+          <label for="lname"></label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Enter Your Last Name."
+            class="mb-2 ps-2"
+          />
+          <p>Last Name</p>
+        </div>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Your email...."
+        class="w-100"" />
+      </div>
+      <div>
+        <!-- <p class="mb-4">Phone</p> -->
+        <label for="number">Phone</label>
+        <input
+          type="number"
+          id="number"
+          placeholder="number...."
+          class="w-100"
+        />
+      </div>
+      <div>
+        <label for="Address">Street Address</label>
+        <input type="address" name="address" id="address" class="w-100"/>
+      </div>
+
+      <div>
+        <p>Address Line 2</p>
+        <div class=" d-flex align-items-center justify-content-between">
+          <div>
+          <input type="address" name="address2" id="address2" />
+          <p>City</p>
+        </div>
+        <div>
+          <label for="Address2"></label>
+          <input type="address" name="address2" id="region" />
+          <p>State/Region/.Province</p>
+        </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+          <label for="Address2"></label>
+          <input type="address" name="address2" id="zip" />
+          <p>Postal / Zip Code</p>
+        </div>
+        <div >
+          <select name="country" id="country" style="width: 190px;">
+            <option value="empty"></option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+            <option value="South Africa"></option>
+          </select>
+          <p>Country</p>
+        </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-primary">Pizza Details</h2>
+        <br />
+      </div>
+      <div>
+        <label for="">Choose Pizza</label>
+        <select name="pizza" id="pizza" style="width: 400px; height: 40px; margin-top: 5px;">
+          <option value="Veganpizza">Vegan pizza</option>
+          <option value="Margheritapizza">Margherita pizza</option>
+          <option value="Fourcheese">Four cheese</option>
+          <option value="CapsicumPizza">Capsicum Pizza</option>
+          <option value="Flatbreadpizza">Flatbread pizza</option>
+          <option value="Greekpizza">Greek pizza</option>
+          <option value="Onionpizza">Onion pizza</option>
+        </select>
+      </div>
+      <div>
+        <label for="" class="mt-2">Pizza Size</label>
+        <select name="pizza" id="pizzaSize" style="width: 400px; height: 40px; margin-top: 5px;">
+          <option value="smal">small (serves 1)</option>
+          <option value="medium">medium (serves 2)</option>
+          <option value=" large">large (serves 3)</option>
+          <option value="suitable">suitable</option>
+        </select>
+      </div>
+      <div>
+        <p class="mt-2">Quantity</p>
+        <select name="pizza" id="pizzaQuantity" style="width: 400px; height: 40px;">
+          <option value="one">serves 1</option>
+          <option value="two">serves 2</option>
+          <option value=" three">serves 3</option>
+          <option value="four">Family Pack</option>
+        </select>
+      </div>
+      <button class="btn btn-primary mt-4" style="margin-left: 120px;" id="orderbtn" onclick="PlaceOrder()">Place Your Order</button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
