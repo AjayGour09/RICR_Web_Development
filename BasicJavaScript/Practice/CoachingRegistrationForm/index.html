@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <div>
+      <header>
+        <div
+          class="container-fluid bg-primary px-3 py-1 d-flex justify-content-between"
+        >
+          <div class="d-flex gap-2">
+            <img
+              src="https://img.freepik.com/premium-vector/initial-alphabet-logo-design-incorporated-with-arrow-financial-success-logo-concept_565585-10805.jpg?w=360"
+              alt=""
+              class="rounded-5"
+              style="width: 50px; height: 50px"
+            />
+            <h1 class="text-light">Registration Form</h1>
+          </div>
+          <button class="btn btn-info">student login</button>
+        </div>
+      </header>
+      <main>
+        <div class="container bg-white border rounded shadow p-3 mt-3">
+          <div class="border border-dark p-3 pt-4 position-relative">
+            <span
+              class="bg-white fs-5 position-absolute px-2"
+              style="top: -15px"
+              >Personal Information</span
+            >
+            <div class="d-flex align-items-center">
+              <label for="fullname" class="form-label w-25"
+                >Full name<sup class="text-danger">*</sup></label
+              >
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="email" class="form-label w-25"
+                >Email<sup class="text-danger">*</sup></label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="number" class="form-label w-25"
+                >Mobile <sup class="text-danger">*</sup></label
+              >
+              <input
+                type="number"
+                name="number"
+                id="number"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="date" class="form-label w-25"
+                >D.O.B <sup class="text-danger">*</sup></label
+              >
+              <input
+                type="date"
+                name="date"
+                id="date"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div>
+      <main>
+        <div class="container bg-white border rounded shadow p-3 mt-3">
+          <div class="border border-dark p-3 pt-4 position-relative">
+            <span
+              class="bg-white fs-5 position-absolute px-2"
+              style="top: -15px"
+              >Academic Details</span
+            >
+            <div class="d-flex align-items-center">
+              <label for="Score" class="form-label w-25"
+                >Qualification<sup class="text-danger">*</sup></label
+              >
+              <select
+                name="Qualification"
+                id="Qualification"
+                class="form-control"
+                required
+              >
+                <option value="">--Select Qualification--</option>
+                <option value="g">Graducation</option>
+                <option value="m">Master</option>
+                <option value="p">Phd</option>
+                <option value="s">Schooling</option>
+              </select>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="grade" class="form-label w-25"
+                >Percentage / Grade <sup class="text-danger">*</sup></label
+              >
+              <input
+                type="grade"
+                name="grade"
+                id="grade"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+      <main>
+        <div class="container bg-white border rounded shadow p-3 mt-3">
+          <div class="border border-dark p-3 pt-4 position-relative">
+            <span
+              class="bg-white fs-5 position-absolute px-2"
+              style="top: -15px"
+              >Available Courses</span
+            >
+            <div class="d-flex align-items-center">
+              <label for="fullname" class="form-label w-25"
+                >Courses<sup class="text-danger">*</sup></label
+              >
+              <select
+                name="Qualification"
+                id="Qualification"
+                class="form-control"
+                required
+              >
+                <option value="">--Select Courses--</option>
+                <option value="g">FSD</option>
+                <option value="m">Machine learning</option>
+                <option value="p">Java</option>
+                <option value="s">Python</option>
+              </select>
+            </div>
+            <div class="">
+              <label for="email" class="form-label w-25"
+                >Preferd Batch<sup class="text-danger">*</sup></label
+              >
+              <div class="d-flex align-content-center justify-content-evenly">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="batch"
+                    id="morning"
+                    class="form-check-input"
+                  />
+                  <span>Afternoon</span>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="batch"
+                    id="Afternoon"
+                    class="form-check-input"
+                  />
+                  <span>Evening</span>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="batch"
+                    id="Evening"
+                    class="form-check-input"
+                  />
+                  <span>Night</span>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="batch"
+                    id="Night"
+                    class="form-check-input"
+                  />
+                  <span>Morning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <button id="button" class="btn btn-primary" style="margin-top: 30px; margin-left: 700px;" onclick="Submit()">Submit</button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

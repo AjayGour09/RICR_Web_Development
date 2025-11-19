@@ -19,7 +19,11 @@
   <body>
     <div
       class="border border-1 mt-4 p-5"
-      style="width: 950px; margin-left: 350px;background-color:rgb(225, 246, 255);"
+      style="
+        width: 950px;
+        margin-left: 350px;
+        background-color: rgb(225, 246, 255);
+      "
     >
       <h2 class="text-center">Enquiry Form</h2>
 
@@ -28,7 +32,6 @@
         with our team and explore your opportunities.
       </p>
 
-      <!-- Row 1 -->
       <div class="d-flex align-items-center gap-5 mt-4">
         <div>
           <label for="personName">Person Name*</label><br />
@@ -51,7 +54,6 @@
         </div>
       </div>
 
-      <!-- Row 2 -->
       <div class="d-flex align-items-center gap-5 mt-4">
         <div>
           <label for="email">Email*</label><br />
@@ -74,7 +76,6 @@
         </div>
       </div>
 
-      <!-- College -->
       <div>
         <label for="clg" class="mt-4">College/School Name*</label><br />
         <input
@@ -85,7 +86,6 @@
         />
       </div>
 
-      <!-- Row 3 -->
       <div class="d-flex align-items-center gap-5">
         <div>
           <label for="year" class="mt-4 mb-0">Year*</label><br />
@@ -115,7 +115,6 @@
       </div>
 
       <div class="d-flex gap-5">
-        <!-- Courses -->
         <div class="mt-4">
           <p>Interested in Which Course*</p>
 
@@ -126,16 +125,12 @@
 
           <div>
             <input type="checkbox" id="DataScience" />
-            <label for="DataScience"
-              >Data Science with Python</label
-            >
+            <label for="DataScience">Data Science with Python</label>
           </div>
 
           <div>
             <input type="checkbox" id="Data" />
-            <label for="Data"
-              >Data Analytics with Python</label
-            >
+            <label for="Data">Data Analytics with Python</label>
           </div>
 
           <div>
@@ -164,12 +159,11 @@
           </div>
         </div>
 
-        <!-- Source Information -->
         <div class="mt-4">
           <p>
             Source of Information <br />
-            (Only choose 'Received call from institute' <br> if you actually got a
-            call from us)*
+            (Only choose 'Received call from institute' <br />
+            if you actually got a call from us)*
           </p>
 
           <select id="Source" style="width: 350px; height: 45px; padding: 10px">
@@ -204,7 +198,14 @@
         </div>
       </div>
 
-      <button class="btn btn-primary mt-5 w-25 border-5 " style="margin-left: 280px;" id="Submitbtn" onclick="SubmitForm()">Submit</button>
+      <button
+        class="btn btn-primary mt-5 w-25 border-5"
+        style="margin-left: 280px"
+        id="Submitbtn"
+        onclick="SubmitForm()"
+      >
+        Submit
+      </button>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
