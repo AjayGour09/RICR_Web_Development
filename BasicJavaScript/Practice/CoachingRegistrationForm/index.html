@@ -159,10 +159,12 @@
               </select>
             </div>
             <div class="">
-              <label for="email" class="form-label w-25"
-                >Preferd Batch<sup class="text-danger">*</sup></label
+              <div
+                class="d-flex align-content-center justify-content-between mt-3"
               >
-              <div class="d-flex align-content-center justify-content-evenly">
+                <label for="email" class="form-label w-25"
+                  >Preferd Batch<sup class="text-danger">*</sup></label
+                >
                 <div>
                   <input
                     type="checkbox"
@@ -201,10 +203,62 @@
                 </div>
               </div>
             </div>
+            <div class="">
+              <div
+                class="d-flex align-content-center justify-content-between mt-3"
+              >
+                <label for="email" class="form-label w-25"
+                  >Batch Timing<sup class="text-danger">*</sup></label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="Timing"
+                    id="morning"
+                    class="form-check-input"
+                  />
+                  <span>7:30-9:00 AM</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="Timing"
+                    id="Afternoon"
+                    class="form-check-input"
+                  />
+                  <span>11:30-1:00 PM</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="Timing"
+                    id="Evening"
+                    class="form-check-input"
+                  />
+                  <span>5:30-7:00 PM</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="Timing"
+                    id="Night"
+                    class="form-check-input"
+                  />
+                  <span>9:30-11:00 PM</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <button id="button" class="btn btn-primary" style="margin-top: 30px; margin-left: 700px;" onclick="Submit()">Submit</button>
+      <button
+        id="button"
+        class="btn btn-primary"
+        style="margin-top: 30px; margin-left: 700px"
+        onclick="Submit()"
+      >
+        Submit
+      </button>
     </div>
 
     <script
