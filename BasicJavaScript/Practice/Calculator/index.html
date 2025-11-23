@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div class="d-flex align-items-center justify-content-center ">
+    <div class="d-flex align-items-center justify-content-center">
       <div
         style="width: 350px; height: 450px; margin-top: 80px"
         class="bg-dark rounded-2"
@@ -24,29 +24,260 @@
           type="text"
           name="data"
           id="data"
-          style="width: 320px; height: 50px"
+          style="width: 320px; height: 50px ; font-size: 22px; padding: 5px;"
           class="mt-5 ms-3 rounded-1 mb-4"
+          placeholder="0"
         />
-        <div style="display: grid; grid-template-columns: auto auto auto auto ; padding-left: 20px; row-gap: 10px;" class="rounded-1">
-          <button style="width: 60px; height: 50px; font-size: 22px; font-weight: 600;   background-color: rgb(209, 204, 204);" class="rounded-2">7</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">8</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">9</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">/</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">4</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">5</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">6</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">*</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">1</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">2</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">3</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">-</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">.</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600;  background-color: rgb(209, 204, 204);"class="rounded-2">0</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600; background-color: rgb(209, 204, 204);"class="rounded-2">+</button>
-          <button style="width: 60px; height: 50px ; font-size: 22px; font-weight: 600; background-color: rgb(255, 68, 0);"class="rounded-2">C</button>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding-left: 20px;
+            row-gap: 10px;
+          "
+          class="rounded-1"
+        >
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('7')"
+          >
+            7
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('8')"
+          >
+            8
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('9')"
+          >
+            9
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('/')"
+          >
+            /
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('4')"
+          >
+            4
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('5')"
+          >
+            5
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('6')"
+          >
+            6
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('*')"
+          >
+            *
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('1')"
+          >
+            1
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('2')"
+          >
+            2
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('3')"
+          >
+            3
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('-')"
+          >
+            -
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('.')"
+          >
+            .
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('0')"
+          >
+            0
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(209, 204, 204);
+            "
+            class="rounded-2"
+            onclick="Input('+')"
+          >
+            +
+          </button>
+          <button
+            class="btn"
+            style="
+              width: 60px;
+              height: 50px;
+              font-size: 22px;
+              font-weight: 600;
+              background-color: rgb(255, 68, 0);
+            "
+            class="rounded-2"
+            id="cancel"
+            onclick="Input('C')"
+          >
+            C
+          </button>
         </div>
 
-        <button style="width: 310px; height: 50px ; font-size: 22px; font-weight: 600; background-color: rgb(255, 68, 0); margin-left: 22px; margin-top: 20px;">=</button>
+        <button
+          style="
+            width: 310px;
+            height: 50px;
+            font-size: 22px;
+            font-weight: 600;
+            background-color: rgb(255, 68, 0);
+            margin-left: 22px;
+            margin-top: 20px;
+          "
+           onclick="Input('=')"
+        >
+          =
+        </button>
       </div>
     </div>
     <script
