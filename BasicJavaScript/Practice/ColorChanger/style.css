@@ -1,0 +1,15 @@
+#container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 10px;
+}
+#main {
+  display: flex;
+  width: 500px;
+  border: 1px solid black;
+}
+#inputfield{
+    margin-top: 20px;
+    
+}
