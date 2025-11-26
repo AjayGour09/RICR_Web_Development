@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body{
+  background: #f9f9f9;
+  color: #111;
+}
+
+/* NAV */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #fff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.nav ul{
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+}
+
+/* HERO */
+.hero{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.highlight{
+  color: #007BFF;
+}
+
+.subtitle{
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.btn{
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* SKILLS */
+.skills{
+  padding: 70px 50px;
+  text-align: center;
+}
+
+.grid{
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  padding: 15px 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  font-size: 20px;
+}
+
+/* PROJECTS */
+.projects{
+  padding: 80px 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.p-card{
+  background: #f2f2f2;
+  padding: 25px;
+  border-radius: 12px;
+  width: 60%;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.contact{
+  padding: 60px;
+  text-align: center;
+  background: #222;
+  color: white;
+}

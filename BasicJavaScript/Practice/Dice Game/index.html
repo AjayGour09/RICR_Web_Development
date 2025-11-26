@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <h2
+        class="d-flex align-items-center justify-content-center container-fluid text-white bg-primary"
+        style="height: 80px; font-size: 34px"
+      >
+        Dice Game
+      </h2>
+    </div>
+    <div
+      class="d-flex align-items-center mt-5 gap-5"
+      style="margin-left: 100px"
+    >
+      <div
+        class="border rounded-3 border-black bg-white shadow"
+        style="width: 600px; height: 320px"
+      >
+        <h1
+          class="d-flex align-items-center justify-content-center mt-4 text-dark"
+        >
+          Player 1
+        </h1>
+        <div class="d-flex align-items-center justify-content-center">
+          <img src="Screenshot 2025-11-26 181512.png" alt="" />
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <button
+            class="btn btn-primary w-25 mt-4"
+            id="playerOneDice"
+            onclick="PlayerOne()"
+            disabled
+          >
+            Roll Dice
+          </button>
+        </div>
+      </div>
+      <div
+        class="border rounded border-dark border-1 bg-white shadow"
+        style="width: 600px; height: 320px"
+      >
+        <h1
+          class="d-flex align-items-center justify-content-center mt-4 text-dark"
+        >
+          Player 2
+        </h1>
+        <div class="d-flex align-items-center justify-content-center">
+          <img src="Screenshot 2025-11-26 181512.png" alt="" />
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <button
+            class="btn btn-primary w-25 mt-4"
+            id="playerTwoDice"
+            disabled
+            onclick="PlayerTwo()"
+          >
+            Roll Dice
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="d-flex align-items-center justify-content-center mt-5">
+        Score Board
+      </h2>
+      <div
+        class="d-flex align-items-center justify-content-center mt-3"
+        style="gap: 150px"
+      >
+        <div>
+          <h3>Player 1</h3>
+          <p
+            class="d-flex align-items-center justify-content-center fs-4"
+            id="playerOneScore"
+          >
+            0
+          </p>
+        </div>
+        <div>
+          <h3>Player 2</h3>
+          <p
+            class="d-flex align-items-center justify-content-center fs-4"
+            id="playerTwoScore"
+          >
+            0
+          </p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center gap-5">
+        <button
+          type="button"
+          class="btn btn-success"
+          id="Startbtn"
+          onclick="Start()"
+        >
+          Start Game
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          id="RestartBtn"
+          disabled
+          onclick="Restart()"
+        >
+          Restart Game
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
