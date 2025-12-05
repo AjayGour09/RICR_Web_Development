@@ -13,9 +13,9 @@ function PlayerOne() {
     console.log("Player One start");
   let score = Number(document.getElementById("playerOneScore").innerText);
   const DF = Math.floor(Math.random() * 6) + 1;
-//   switch(DF){
-//     case:1:document.image url copy and paste break
-//   }
+  // switch(DF){
+  //   case:1
+  // }
   if (DF === 6) {
     document.getElementById("playerOneDice").disabled = true;
     document.getElementById("playerTwoDice").disabled = false;

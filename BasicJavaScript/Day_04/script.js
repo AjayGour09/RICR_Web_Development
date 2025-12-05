@@ -33,3 +33,11 @@ function SB_Control() {
 
   }
 }
+document.getElementById("c1").addEventListener("mouseenter",()=>{
+  fillcolor("red");
+})
+
+function fillcolor(Color){
+  console.log(Color);
+  document.getElementById("Container").style.backgroundColor = Color;
+}
