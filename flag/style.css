@@ -1,0 +1,10 @@
+#map-container {
+  position: relative;
+  width: 700px;
+}
+
+#icon {
+  position: absolute;
+  font-size: 30px;
+  display: none;
+}
