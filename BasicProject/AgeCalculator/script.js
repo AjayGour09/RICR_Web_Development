@@ -5,7 +5,7 @@ function calculateAge() {
   const result = document.getElementById("result");
 
   if (!dob) {
-    result.textContent = "⚠️ Please select your date of birth!";
+    result.textContent = "Please select your date of birth!";
     result.style.color = "red";
     return;
   }
@@ -21,5 +21,5 @@ function calculateAge() {
   }
 
   result.style.color = "#333";
-  result.textContent = `🎉 You are ${age} years old!`;
+  result.textContent = `You are ${age} years old!`;
 }
