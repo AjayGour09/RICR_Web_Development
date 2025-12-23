@@ -1,0 +1,18 @@
+a:hover {
+  color: orange !important;
+}
+a:active {
+  color: red !important;
+}
+.card{
+    height: 500px;
+}
+.maind{
+    width:800vw ;
+    height: 250px !important;
+}
+
+.imageee{
+    width: 200px;
+    height: 200px;
+}
