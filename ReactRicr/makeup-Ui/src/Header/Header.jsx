@@ -1,11 +1,12 @@
 
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     
       <>
-      <div className='flex justify-between  text-2xl bg-pink-300 p-2'>
+      <div className='flex justify-between  text-2xl bg-pink-300 p-2 fixed w-full top-0 scrollbar-hide'>
         <div>
             Makeup UI
         </div>
@@ -17,7 +18,7 @@ const Header = () => {
         </div>
       </div>
       </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
