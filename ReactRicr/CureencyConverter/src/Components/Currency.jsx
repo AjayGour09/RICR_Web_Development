@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CountryData from "../assets/CountryData.json";
 import toast from "react-hot-toast";
 import axios from "axios";
-
 const Currency = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
