@@ -6,11 +6,13 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import { ToastBar, Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+      <Toaster/>
         <Header />
 
         <Routes>
