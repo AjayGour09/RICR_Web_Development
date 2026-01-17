@@ -17,8 +17,8 @@ const UserDashBoard = () => {
   return (
     <>
       {SideBar ? (
-        <div className="w-full h-[90vh] flex">
-          <div className="border border-green-600 w-1/7 bg-(--color-background)">
+        <div className="w-full h-[90vh] flex duration-300">
+          <div className=" border border-green-600 w-1/7 bg-(--color-background)">
             <UserSideBar active={active} setActive={setActive} SideBar={SideBar} setSideBar={setSideBar} />
           </div>
 
@@ -31,7 +31,7 @@ const UserDashBoard = () => {
           </div>
         </div>
       ) : (
-        <div className="w-80 h-[90vh] flex">
+        <div className="w-80 h-[90vh] flex duration-400">
           <div className="border border-green-600 w-2/10 bg-(--color-background)">
             <UserSideBarLogo
               active={active}
@@ -41,7 +41,7 @@ const UserDashBoard = () => {
             />
           </div>
 
-          <div className="w-8/10">
+          <div className="w-8/10 ">
             {active == "overview" && <UserOverView />}
             {active == "profile" && <UserProfile />}
             {active == "orders" && <UserOrders />}
