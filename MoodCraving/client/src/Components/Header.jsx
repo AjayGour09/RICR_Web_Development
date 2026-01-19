@@ -1,8 +1,10 @@
 import React from "react";
-import tranparentLogo from "../assets/tranparentLogo.png"
+import tranparentLogo from "../assets/tranparentLogo.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Header = () => {
+  const { user, isLogin } = useAuth();
   const navigate = useNavigate();
   return (
     <>
@@ -35,12 +37,24 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex gap-3">
-          <button onClick={()=>navigate("/Login")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded ">
-            Login
-          </button>
-          <button onClick={()=>navigate("/Register")} className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded ">
-            Register
-          </button>
+          {isLogin ? (
+            <span className="text-red-400">{user.fullName}</span>
+          ) : (
+            <div className="border border-red-200">
+              <button
+                onClick={() => navigate("/Login")}
+                className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
+              >
+                Login
+              </button>
+              <button
+                onClick={() => navigate("/Register")}
+                className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
+              >
+                Register
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
