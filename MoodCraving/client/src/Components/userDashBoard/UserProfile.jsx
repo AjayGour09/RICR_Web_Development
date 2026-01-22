@@ -8,8 +8,14 @@ const UserProfile = () => {
   const { user } = useAuth();
   return (
     <>
-      <div className="flex  gap-5">
+      <div className="mt-50 ms-110 border p-5 w-[560px]">
+
         <div>
+          <div className="border rounded-[50%] w-25 h-25">img</div>
+          <div></div>
+        </div>
+        <div className="">
+        <div className="flex">
           <span>Name:</span>
           <span>{user.fullName}</span>
         </div>
@@ -27,6 +33,7 @@ const UserProfile = () => {
         >
           Edit Profile
         </button>
+      </div>
       </div>
       {isEditProfileModalOpen && (
         <EditProfileModal onClose={() => SetIsEditProfileModalOpen(false)} />
