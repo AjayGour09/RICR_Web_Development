@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../../../context/AuthContext";
-
+import api from  "../../../config/Api.jsx"
 const EditProfileModal = ({ onClose }) => {
   const { user } = useAuth();
 
   const [fullName, setFullName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
 
-  // ✅ user aane ke baad state set hogi
+  
   useEffect(() => {
     if (user) {
       setFullName(user.fullName || "");
@@ -15,10 +15,22 @@ const EditProfileModal = ({ onClose }) => {
     }
   }, [user]);
 
-  const handleSave = () => {
+  const handleSave =async (e) => {
+    e.preventDefault();
     console.log("Updated Data:", { fullName, mobileNumber });
     onClose();
+
+    try {
+      const res = await api.put("/user/update",FormData)
+    } catch (error) {
+      console.log(error);
+      
+    }finally{
+      onClose();
+    }
   };
+
+
 
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">

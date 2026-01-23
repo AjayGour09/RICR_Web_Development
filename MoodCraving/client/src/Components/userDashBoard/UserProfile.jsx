@@ -8,9 +8,9 @@ const UserProfile = () => {
   const { user } = useAuth();
   return (
     <>
-      <div className="mt-40 ms-110 border border-green-800 p-5 w-[560px] bg-white rounded">
+      <div className="mt-40 ms-110  p-5 w-[560px] bg-white rounded-2xl shadow-2xl">
         <div className="flex gap-3">
-          <div className="border rounded-[50%] w-25 h-25"></div>
+          <div className="border border-red-900 shadow-2xl rounded-[50%] w-25 h-25"></div>
           <div className="mt-8">
             <div className="ms-2 text-2xl">
              
@@ -20,7 +20,7 @@ const UserProfile = () => {
     
               <span>{user.email}</span>
             </div>
-          </div>
+          </div> 
         </div>
         <div className="">
           <div className="flex justify-between mb-2 mt-7 ">
@@ -39,7 +39,7 @@ const UserProfile = () => {
           </div>
           <hr />
           <button
-            className="border px-7 py-2 bg-amber-100 mt-5"
+            className="border rounded-xl px-7 py-2 bg-amber-100 mt-5 hover:bg-amber-800 hover:text-amber-50 hover:cursor-pointer"
             onClick={() => SetIsEditProfileModalOpen(true)}
           >
             Edit Profile
