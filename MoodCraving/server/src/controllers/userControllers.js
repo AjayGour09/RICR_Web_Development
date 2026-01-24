@@ -2,28 +2,29 @@ import User from "../models/userModel.js";
 
 export const UserUpdate = async (req, res, next) => {
   try {
-    const { fullName, email, mobileNumber } = req.body;
+    //logic here
 
+    const { fullName, email, mobileNumber } = req.body;
     const currentUser = req.user;
 
     if (!fullName || !email || !mobileNumber) {
-      const error = new Error("All feild requrid");
+      const error = new Error("All Feilds Required");
       error.statusCode = 400;
       return next(error);
     }
-    // console.log("OldData:",currentUser);
 
+    console.log("OldData: ", currentUser); //old user data in JSON format
+    //first Way
     // currentUser.fullName = fullName;
     // currentUser.email = email;
     // currentUser.mobileNumber = mobileNumber;
-
     // await currentUser.save();
 
     // console.log("NewData:", currentUser);
 
-    //second way
+    //Second Way
 
-    const updateUser = await User.findByIdAndUpdate(
+    const updatedUser = await User.findByIdAndUpdate(
       { _id: currentUser._id },
       {
         fullName,
@@ -33,9 +34,10 @@ export const UserUpdate = async (req, res, next) => {
       { new: true },
     );
 
+    console.log("Updated User: ", updatedUser);
     res
       .status(200)
-      .json({ message: "User updateed Sucessfully", data: updateUser });
+      .json({ message: "User Updated Sucessfully", data: updatedUser });
 
     console.log("Updating the user");
   } catch (error) {
