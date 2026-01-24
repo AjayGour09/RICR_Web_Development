@@ -40,7 +40,7 @@ const Header = () => {
           {isLogin ? (
             <div className="text-red-400 cursor-pointer" onClick={()=>navigate("/user-dashboard")}>{user.fullName}</div>
           ) : (
-            <div className="border border-red-200">
+            <div className=" border-red-200 flex gap-4">
               <button
                 onClick={() => navigate("/Login")}
                 className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "

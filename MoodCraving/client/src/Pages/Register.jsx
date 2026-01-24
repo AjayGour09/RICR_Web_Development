@@ -43,6 +43,7 @@ const Register = () => {
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
         formData.email
       )
+      
     ) {
       Error.email = "Use Proper Email Format";
     }
