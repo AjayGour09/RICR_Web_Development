@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../../../context/AuthContext";
-import api from "../../../config/Api.jsx";
+import api from "../../../config/Api";
 
 const EditProfileModal = ({ onClose }) => {
   const { user, setUser } = useAuth();
@@ -11,20 +11,22 @@ const EditProfileModal = ({ onClose }) => {
   });
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
+    console.log("form Submitted");
+    console.log(formData);
 
-  try {
-    const res = await api.put("/user/update", formData);
-    sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
-    setUser(res.data.data);
-    onClose();
-  } catch (error) {
-    console.log("Update failed:", error);
-  }
-  finally{
-    onClose();
-  }
-};
+    try {
+      const res = await api.put("/user/update", formData);
+      sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
+      setUser(res.data.data);
+      setIsLogin(true);
+      // sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
+    } catch (error) {
+      console.log(error);
+    } finally {
+      onClose();
+    }
+  };
 
   return (
     <>

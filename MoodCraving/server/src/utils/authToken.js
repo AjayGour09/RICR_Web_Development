@@ -8,7 +8,7 @@ export const genToken =async (user,res)=>{
 
         }
 
-        const token = await jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:'1d'})
+        const token =jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:'1d'})
 
         console.log(token);
         res.cookie("parleG",token,{

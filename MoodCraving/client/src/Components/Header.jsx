@@ -1,11 +1,35 @@
 import React from "react";
 import tranparentLogo from "../assets/tranparentLogo.png";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext.jsx";
 
 const Header = () => {
-  const { user, isLogin } = useAuth();
+  const { user, isLogin, role } = useAuth();
   const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    switch (role) {
+      case "manager": {
+        navigate("/resturant-dashboard");
+        break;
+      }
+      case "partner": {
+        navigate("/rider-dashboard");
+        break;
+      }
+      case "customer": {
+        navigate("/user-dashboard");
+        break;
+      }
+      case "admin": {
+        navigate("/admin-dashboard");
+        break;
+      }
+      default:
+        break;
+    }
+  };
+
   return (
     <>
       <div className="bg-(--color-primary) px-4 py-2 flex justify-between items-center">
@@ -13,7 +37,7 @@ const Header = () => {
           <img
             src={tranparentLogo}
             alt=""
-            className="h-12 w-20 object-cover invert-100 animate-bounce"
+            className="h-12 w-20 object-cover invert-100"
           />
         </Link>
         <div className="flex gap-4">
@@ -36,24 +60,29 @@ const Header = () => {
             Contact
           </Link>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           {isLogin ? (
-            <div className="text-red-400 cursor-pointer" onClick={()=>navigate("/user-dashboard")}>{user.fullName}</div>
+            <div
+              className="text-red-500 cursor-pointer"
+              onClick={handleNavigate}
+            >
+              {user.fullName}
+            </div>
           ) : (
-            <div className=" border-red-200 flex gap-4">
+            <>
               <button
-                onClick={() => navigate("/Login")}
+                onClick={() => navigate("/login")}
                 className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
               >
                 Login
               </button>
               <button
-                onClick={() => navigate("/Register")}
+                onClick={() => navigate("/register")}
                 className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
               >
                 Register
               </button>
-            </div>
+            </>
           )}
         </div>
       </div>

@@ -1,13 +1,16 @@
 import React from "react";
-import Header from "./Components/Header";
+import Header from "./components/Header.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home.jsx";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import Login from "./Pages/Login";
 import Register from "./Pages/Register";
-import { ToastBar, Toaster } from "react-hot-toast";
-import UserDashBoard from "./Pages/DashBoards/UserDashBoard";
+import Login from "./Pages/Login";
+import { Toaster } from "react-hot-toast";
+import UserDashboard from "./Pages/DashBoards/UserDashBoard.jsx";
+import RiderDashboard from "./Pages/DashBoards/RiderDashBoard.jsx";
+import RestuarantDashboard from "./Pages/DashBoards/RestuarantDashboard.jsx";
+import AdminDashboard from "./Pages/DashBoards/AdminDashBoard.jsx";
 
 const App = () => {
   return (
@@ -18,11 +21,14 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/user-dashboard" element={<UserDashBoard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/user-dashboard" element={<UserDashboard />} />
+          <Route path="/rider-dashboard" element={<RiderDashboard />} />
+          <Route path="/resturant-dashboard" element={<RestuarantDashboard />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </>
