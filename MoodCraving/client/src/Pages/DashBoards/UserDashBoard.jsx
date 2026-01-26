@@ -1,57 +1,65 @@
-import React from "react";
-import  {
-  UserSideBar,
-  UserSideBarLogo,
-} from "../../Components/userDashBoard/UserSideBar";
-import { useState } from "react";
-import UserOverView from "../../Components/userDashBoard/UserOverView";
-import UserProfile from "../../Components/userDashBoard/UserProfile";
-import UserOrders from "../../Components/userDashBoard/UserOrders";
-import UserTransaction from "../../Components/userDashBoard/UserTransaction";
-import UserHelpDesk from "../../Components/userDashBoard/UserHelpDesk";
+import React, { useState, useEffect } from "react";
+import UserSideBar from "../../Components/userDashBoard/UserSideBar.jsx";
+import UserOverview from "../../Components/userDashBoard/UserOverView.jsx";
+import UserProfile from "../../Components/userDashBoard/UserProfile.jsx";
+import UserOrders from "../../Components/userDashBoard/UserOrders.jsx";
+import UserTransactions from "../../Components/userDashBoard/UserTransaction.jsx";
+import UserHelpDesk from "../../Components/userDashBoard/UserHelpDesk.jsx";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
-const UserDashBoard = () => {
+const UserDashboard = () => {
+  const { role, isLogin } = useAuth();
+  const navigate = useNavigate();
   const [active, setActive] = useState("overview");
-  const [SideBar, setSideBar] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  useEffect(() => {
+    if (!isLogin) {
+      navigate("/login");
+    }
+  });
+
+  if (role !== "customer") {
+    return (
+      <>
+        <div className="p-3">
+          <div className="border rounded shadow p-5 w-4xl mx-auto text-center bg-gray-100">
+            <div className="text-5xl text-red-600">
+              ⊗
+            </div>
+            <div className="text-xl">
+              You are not login as Customer. Please Login again.
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
-      {SideBar ? (
-        <div className="w-full h-[90vh] flex duration-300">
-          <div className=" border border-green-600 w-1/7 bg-(--color-background)">
-            <UserSideBar active={active} setActive={setActive} SideBar={SideBar} setSideBar={setSideBar} />
-          </div>
-
-          <div>
-            {active == "overview" && <UserOverView />}
-            {active == "profile" && <UserProfile />}
-            {active == "orders" && <UserOrders />}
-            {active == "transaction" && <UserTransaction />}
-            {active == "helpdesk" && <UserHelpDesk />}
-          </div>
+      <div className="w-full h-[90vh] flex">
+        <div
+          className={`bg-(--color-background) duration-300 ${isCollapsed ? "w-2/60" : "w-12/60"}`}
+        >
+          <UserSideBar
+            active={active}
+            setActive={setActive}
+            isCollapsed={isCollapsed}
+            setIsCollapsed={setIsCollapsed}
+          />
         </div>
-      ) : (
-        <div className="w-80 h-[90vh] flex duration-400">
-          <div className="border border-green-600 w-2/10 bg-(--color-background)">
-            <UserSideBarLogo
-              active={active}
-              setActive={setActive}
-              SideBar={SideBar}
-              setSideBar={setSideBar}
-            />
-          </div>
-
-          <div className="w-8/10 ">
-            {active == "overview" && <UserOverView />}
-            {active == "profile" && <UserProfile />}
-            {active == "orders" && <UserOrders />}
-            {active == "transaction" && <UserTransaction />}
-            {active == "helpdesk" && <UserHelpDesk />}
-          </div>
+        <div className={`${isCollapsed ? "w-58/60" : "w-48/60"} duration-300`}>
+          {active === "overview" && <UserOverview />}
+          {active === "profile" && <UserProfile />}
+          {active === "orders" && <UserOrders />}
+          {active === "transactions" && <UserTransactions />}
+          {active === "helpdesk" && <UserHelpDesk />}
         </div>
-      )}
+      </div>
     </>
   );
 };
 
-export default UserDashBoard;
+export default UserDashboard;
