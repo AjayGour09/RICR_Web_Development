@@ -49,6 +49,7 @@ export const UserUpdate = async (req, res, next) => {
 
 export const UserChangePhoto = async (req, res, next) => {
   try {
+   
   const currentUser=req.user ;
     const dp = req.file;
     
@@ -63,9 +64,9 @@ export const UserChangePhoto = async (req, res, next) => {
     }
 
     const b64 = Buffer.from(dp.buffer).toString("base64");
-    console.log(b64.slice(0,100));
-    const dataURI = `data:${dp.mimetype}; base64, ${b64}`
-    console.log( "DataURI",dataURI.slice(1,100));
+   
+    const dataURI = `data:${dp.mimetype};base64,${b64}`
+    
     
     const result = await cloudinary.uploader.upload(dataURI,{
       folder:"Craving/User",
@@ -85,6 +86,8 @@ export const UserChangePhoto = async (req, res, next) => {
 
     res.status(200).json({ message: "Photo Updated", data:currentUser });
   } catch (error) {
+    console.log(error);
+    
     next(error);
   }
 };

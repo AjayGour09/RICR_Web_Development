@@ -7,22 +7,30 @@ import api from "../../config/Api";
 import toast from "react-hot-toast";
 
 const UserProfile = () => {
-  const { user } = useAuth();
+  const { user,setUser } = useAuth();
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
   const [preview, setPreview] = useState("");
   const [photo, setPhoto] = useState("");
 
-  const changePhoto = async () => {
+  const changePhoto = async (image) => {
+    
     const form_Data = new FormData();
 
-    form_Data.append("image", photo);
+    form_Data.append("image", image);
     form_Data.append("imageURL", preview);
 
     try {
       const res = await api.patch("/user/changePhoto", form_Data);
 
+      setUser(res.data.data);
+        console.log(res.data.data);
+        
+      sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
+
       toast.success(res.data.message);
     } catch (error) {
+      console.log(error);
+      
       toast.error(error?.response?.data?.message || "Unknown Error");
     }
   };
@@ -32,10 +40,10 @@ const UserProfile = () => {
     const newPhotoURL = URL.createObjectURL(file);
     //console.log(newPhotoURL);
     setPreview(newPhotoURL);
-    setTimeout(() => {
+   
       setPhoto(file);
-      changePhoto();
-    }, 5000);
+      changePhoto(file);
+   
   };
 
   return (
