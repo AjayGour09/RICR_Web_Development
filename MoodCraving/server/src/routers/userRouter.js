@@ -4,7 +4,7 @@ import {
   UserChangePhoto,
   UserResetPassword,
 } from "../controllers/userControllers.js";
-import { Protect } from "../middlewares/authMiddleware.js";
+import { Protect } from "../middlewares/authMiddleWare.js";
 import multer from "multer";
 
 const router = express.Router();
