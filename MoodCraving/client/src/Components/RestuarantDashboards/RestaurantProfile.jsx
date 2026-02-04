@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditRestaurantProfileModal from "./modals/EditRestaurantProfileModal";
-import UserImage from "../../assets/userImage.jpg";
+import UserImage from "../../assets/userImage.png";
 import {
   FaCamera,
   FaMapLocationDot,
@@ -11,7 +11,7 @@ import { FaFileAlt } from "react-icons/fa";
 import { BiSolidBank } from "react-icons/bi";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
-import ResetPasswordModal from "../userDashboard/modals/ResetPasswordModal";
+import ResetPasswordModal from "../userDashBoard/modals/ResetPasswordModal.jsx";
 
 const RestaurantProfile = () => {
   const { user, setUser } = useAuth();
