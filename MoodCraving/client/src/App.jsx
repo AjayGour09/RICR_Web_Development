@@ -1,16 +1,17 @@
 import React from "react";
-import Header from "./components/Header.jsx";
+import Header from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home.jsx";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Register from "./Pages/Register";
-import Login from "./Pages/Login";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import { Toaster } from "react-hot-toast";
-import UserDashboard from "./Pages/DashBoards/UserDashBoard.jsx";
-import RestuarantDashboards from "./Pages/DashBoards/RestuarantDashboards.jsx";
-import RiderDashboard from "./Pages/DashBoards/RiderDashBoard.jsx";
-import AdminDashboard from "./Pages/DashBoards/AdminDashBoard.jsx";
+import UserDashboard from "./pages/dashboards/UserDashboard";
+import RiderDashboard from "./pages/dashboards/RiderDashboard";
+import ResturantDashboard from "./pages/DashBoards/RestuarantDashboards.jsx";
+import AdminDashboard from "./pages/dashboards/AdminDashboard";
+import OrderNow from "./pages/OrderNow.jsx";
 
 const App = () => {
   return (
@@ -26,9 +27,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/user-dashboard" element={<UserDashboard />} />
-          <Route path="/resturant-dashboard"element={<RestuarantDashboards />}/>
           <Route path="/rider-dashboard" element={<RiderDashboard />} />
+          <Route path="/resturant-dashboard" element={<ResturantDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/order-now" element={<OrderNow />} />
+
         </Routes>
       </BrowserRouter>
     </>

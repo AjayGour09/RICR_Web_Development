@@ -1,6 +1,11 @@
 import express from "express";
-import {NewContact} from "../controllers/publicController.js"
+import {
+  NewContact,
+  GetAllRestaurants,
+} from "../controllers/publicController.js";
 
 const router = express.Router();
-router.post ('/newContact',NewContact);
+
+router.post("/new-contact", NewContact);
+router.get("/allRestaurants", GetAllRestaurants);
 export default router;

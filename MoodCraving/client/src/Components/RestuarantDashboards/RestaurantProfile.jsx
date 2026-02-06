@@ -11,7 +11,7 @@ import { FaFileAlt } from "react-icons/fa";
 import { BiSolidBank } from "react-icons/bi";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
-import ResetPasswordModal from "../userDashBoard/modals/ResetPasswordModal.jsx";
+import ResetPasswordModal from "../userDashboard/modals/ResetPasswordModal.jsx";
 
 const RestaurantProfile = () => {
   const { user, setUser } = useAuth();
@@ -25,7 +25,7 @@ const RestaurantProfile = () => {
     form_Data.append("image", photo);
 
     try {
-      const res = await api.patch("/user/changePhoto", form_Data);
+      const res = await api.patch("/restaurant/changePhoto", form_Data);
       toast.success(res.data.message);
       setUser(res.data.data);
       sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
