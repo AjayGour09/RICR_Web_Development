@@ -1,17 +1,19 @@
 import React from "react";
 import Header from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Contact from "./Pages/Contact";
+import Register from "./Pages/Register.jsx";
+import Login from "./Pages/Login.jsx";
 import { Toaster } from "react-hot-toast";
-import UserDashboard from "./pages/dashboards/UserDashboard";
-import RiderDashboard from "./pages/dashboards/RiderDashboard";
-import ResturantDashboard from "./pages/DashBoards/RestuarantDashboards.jsx";
-import AdminDashboard from "./pages/dashboards/AdminDashboard";
-import OrderNow from "./pages/OrderNow.jsx";
+import UserDashboard from "./Pages/DashBoards/UserDashBoard.jsx";
+import RiderDashboard from "./Pages/DashBoards/RiderDashBoard.jsx";
+import ResturantDashboard from "./Pages/DashBoards/RestuarantDashboards.jsx";
+import AdminDashboard from "./Pages/DashBoards/AdminDashBoard.jsx";
+import OrderNow from "./Pages/OrderNow.jsx";
+import RestaurantDisplayMenu from "./Pages/RestaurantDisplayMenu.jsx";
+import NotFound from "./Pages/NotFound.jsx";
 
 const App = () => {
   return (
@@ -31,7 +33,8 @@ const App = () => {
           <Route path="/resturant-dashboard" element={<ResturantDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/order-now" element={<OrderNow />} />
-
+          <Route path="/restaurant/:id" element={<RestaurantDisplayMenu />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
