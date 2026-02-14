@@ -48,25 +48,42 @@ export const GetAllRestaurants = async (req, res, next) => {
 export const GetRetaurantMenuData = async (req, res, next) => {
   try {
     const { id, page } = req.params;
-    console.log(page);
+    const pageNum = parseInt(page) || 1;
+    const itemsPerPage = 6;
 
     if (!id) {
-      const error = new Error("All feilds required");
+      const error = new Error("All fields required");
       error.statusCode = 400;
       return next(error);
     }
 
-    const restaurantMenuData = await Menu.find({
+    // Get total count for pagination
+    const totalItems = await Menu.countDocuments({ resturantID: id });
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    // Calculate skip based on page number
+    const skip = (pageNum - 1) * itemsPerPage;
+
+    const restaurantData = await User.findById(id).select("-password");
+
+    const menuItems = await Menu.find({
       resturantID: id,
     })
       .sort({ updatedAt: -1 })
-      .skip(1)
-      .limit(2)
+      .skip(skip)
+      .limit(itemsPerPage)
       .populate("resturantID");
 
-    res
-      .status(200)
-      .json({ message: "Menu fetched Sucessfully", data: restaurantMenuData });
+    res.status(200).json({
+      message: "Menu fetched Successfully",
+      data: {
+        restaurant: restaurantData,
+        items: menuItems,
+        totalPages,
+        currentPage: pageNum,
+        totalItems,
+      },
+    });
   } catch (error) {
     next(error);
   }

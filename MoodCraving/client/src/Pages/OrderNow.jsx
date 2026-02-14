@@ -63,8 +63,7 @@ const OrderNow = () => {
               <div className="h-44 w-full overflow-hidden">
                 <img
                   src={
-                    restaurant.image ||
-                    "https://source.unsplash.com/400x300/?restaurant,food"
+                    restaurant.photo.url
                   }
                   alt="restaurant"
                   className="h-full w-full object-cover hover:scale-105 transition duration-300"
